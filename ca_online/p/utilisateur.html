@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employés | Hôtel management</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+
+    <aside>
+
+        <div class="logo">
+            LOGO
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html" class="">
+                        <span class="material-symbols-outlined">home</span>
+                        <span>Accueil</span>
+                    </a>
+                <li>
+                    <a href="reservation.html" class="">
+                        <span class="material-symbols-outlined">event</span>
+                        <span>Réservations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="historique.html" class="">
+                        <span class="material-symbols-outlined">history</span>
+                        <span>Historiques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <span>Statistique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employes.html" class="">
+                        <span class="material-symbols-outlined">people</span>
+                        <span>Employés</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hotel.html" class="">
+                        <span class="material-symbols-outlined">night_shelter</span>
+                        <span>Hôtel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="utilisateur.html" class="active">
+                        <span class="material-symbols-outlined">person</span>
+                        <span>Utilisateurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span>Réglages</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <header>
+        <div class="container flex-a-center flex-sb">
+            <div class="left flex-a-center gap-1">
+                <span class="material-symbols-outlined icon-btn">menu</span>
+                <div class="top-search">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="search" name="search-text" id="search-text" placeholder="Rechercher...">
+                </div>
+            </div>
+            <div class="right flex-a-center gap-1">
+                <div class="notifications">
+                    <span class="material-symbols-outlined icon-btn">notifications</span>
+                    <div class="drop-items"></div>
+                </div>
+                <div class="login-element">
+                    <span class="material-symbols-outlined icon-btn">person</span>
+                    <div class="drop-items"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="action-btns-container">
+            <button class="button-primary" data-modal="#checkInModal"><span
+                    class="material-symbols-outlined">add_circle</span>
+                <span>Ajouter un employé</span></button>
+            <!-- <button class="button-secondary" data-modal="#reservationModal"><span
+                    class="material-symbols-outlined">timer</span>
+                Nouvelle réservation</button> -->
+        </div>
+
+        <h1 class="mt-2">Employés</h1>
+        <h5>Gérer tous vos employés</h5>
+
+        <div class="card-container mt-2">
+            <div class="table-responsive">
+                <h3>Liste des employés</h3>
+                <table class="mt-2">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom et prénoms</th>
+                            <th>Téléphone</th>
+                            <th>Profil</th>
+                            <th>Mot de passe</th>
+                            <th>Hôtel</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Gérant</td>
+                            <td>aaaaaa</td>
+                            <td>Hôtel 1</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Gérant</td>
+                            <td>aaaaaa</td>
+                            <td>Hôtel 2</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Gérant</td>
+                            <td>aaaaaa</td>
+                            <td>Hôtel 2</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <!-- Modals -->
+
+    <div class="modal" id="checkInModal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3>Enregistrement d'un employé</h3>
+                <span class="material-symbols-outlined close-modal">close</span>
+            </div>
+            <div class="modal-body">
+                <form class="form" id="clientForm">
+                    <!-- <h4>Infos du client</h4> -->
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" name="name" id="name" placeholder="Nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="first-name">Prénoms</label>
+                        <input type="text" name="first-name" id="first-name" placeholder="Prénoms" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="text" name="phone" id="phone" placeholder="Numéro de téléphone" required>
+                    </div>
+                    <div class="cols-2 gap-2">
+                        <div class="form-group">
+                            <label for="identity">Pièce d'identité N°</label>
+                            <input type="text" name="identity" id="identity" placeholder="Numéro de pièce d'identité">
+                        </div>
+                        <div class="form-group">
+                            <label for="birthday">Date de naissance</label>
+                            <input type="date" name="birthday" id="birthday">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="salary">Salaire</label>
+                        <input type="text" name="salary" id="salary" placeholder="Salaire">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="role">Role</label>
+                        <select name="role" id="role" required>
+                            <option value="">-- Selectionner --</option>
+                            <option value="gerant">Gérant</option>
+                            <option value="employe">Employé</option>
+                            <option value="admin">Administrateur</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <div class="flex-a-center gap-2">
+                            <input type="text" name="password" id="password" placeholder="Mot de passe" required>
+                            <button class="button-secondary" type="button" onclick="generatePassword(12, 'input#password')">Générer</button>
+                        </div>
+                    </div>
+
+                    <div class="flex-j-end flex-a-center gap-1 mt-2">
+                        <button type="reset" class="button-danger">Annuler</button>
+                        <button type="submit" class="button-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-foot">
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="modal" id="timeElapsedModal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3>Notifications</h3>
+                <span class="material-symbols-outlined close-modal">close</span>
+            </div>
+            <div class="modal-body">
+                <div class="notifs">
+
+                </div>
+            </div>
+            <div class="modal-foot"></div>
+        </div>
+    </div>
+
+    <script src="public/js/functions.js"></script>
+    <script src="public/js/scripts.js"></script>
+</body>
+
+</html>

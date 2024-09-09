@@ -1,0 +1,84 @@
+:root {
+    /* Couleurs principales */
+    /* --primary-color: #074f99; */
+    /* --primary-color: #FF5722; */
+    --primary-color: #052561;
+    /* Bleu primaire */
+    /* --primary-color-light: #4d79c4; */
+    --primary-color-light: #fed2c5;
+    /* Bleu clair */
+    /* --primary-color-lighter: #b4c8e9; */
+    --primary-color-lighter: #ffbeaa;
+    /* Bleu très clair */
+    /* --primary-color-dark: #032b56; */
+    /* --primary-color-dark: #ca3202; */
+    --primary-color-dark: #031536;
+    /* Bleu foncé */
+
+    /* Couleurs secondaires */
+    /* --secondary-color: #FFD700; */
+    --secondary-color: #fff;
+    /* Or */
+    --secondary-color-light: #FFEC8B;
+    /* Or clair */
+    --secondary-color-dark: #DAA520;
+    /* Or foncé */
+
+    /* Couleurs de texte */
+    --text-color: #333333;
+    /* Texte principal */
+    --text-color-light: #FFFFFF;
+    /* Texte sur fonds sombres */
+    --text-color-muted: #666666;
+    /* Texte secondaire/mis en sourdine */
+
+    /* Couleurs de fond */
+    --background-color: #F5F5F5;
+    /* Arrière-plan principal */
+    --background-color-light: #FFFFFF;
+    /* Arrière-plan clair */
+    --background-color-dark: #E0E0E0;
+    /* Arrière-plan foncé */
+
+    /* Couleurs de fond neutre*/
+    --background-color-neutre: #e5e7e9;
+
+    /* Couleurs des bordures */
+    --border-color: #CCCCCC;
+    /* Bordure principale */
+    --border-color-light: #E0E0E0;
+    /* Bordure claire */
+    --border-color-dark: #999999;
+    /* Bordure foncée */
+
+    /* Couleurs d'accentuation */
+    --accent-color: #FF4500;
+    /* Rouge vif */
+    --accent-color-light: #FF6347;
+    /* Rouge clair */
+    --accent-color-dark: #8B0000;
+    /* Rouge foncé */
+
+    /* Couleurs de validation */
+    --success-color: #28a745;
+    --success-color-dark: #1c7030;
+    /* Vert pour succès */
+    --warning-color: #ffc107;
+    /* Jaune pour avertissement */
+    --error-color: #dc3545;
+    /* Rouge pour erreur */
+
+    --grey-color: #ededed;
+
+    /*  */
+    --aside-width: 120px;
+
+    --transition-2: all .2s ease-in-out;
+
+
+    --mp-bleu-clair: #007BFF;
+    --mp-vert-clair: #28A745;
+    --mp-orange-vif: #FF5722;
+    --mp-gris-fonce: #343A40;
+    --mp-blanc: #FFFFFF;
+}

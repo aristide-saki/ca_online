@@ -1,0 +1,350 @@
+@import url('root.css');
+@import url('default.css');
+
+
+
+aside {
+    width: var(--aside-width);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px;
+    background: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+aside .logo {
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+aside nav{
+    height: calc(100% - 60px);
+    overflow-y: auto;
+}
+
+
+aside a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all .2s ease-in-out;
+}
+
+aside a:hover {
+    background: #df3500;
+    color: var(--text-color-light);
+}
+
+aside a.active {
+    background: var(--primary-color-dark);
+    color: var(--text-color-light);
+    /* pointer-events: none; */
+    /* cursor: none; */
+}
+
+aside a span:nth-child(2) {
+    font-size: 12px;
+}
+
+header,
+main {
+    width: 100%;
+    max-width: calc(100% - var(--aside-width));
+    margin-left: var(--aside-width);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    padding: 10px 20px;
+    background: var(--background-color-light);
+    border-bottom: 1px solid var(--border-color);
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+
+header .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-btns-container {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    background: var(--primary-color-lighter);
+    border-radius: 8px;
+}
+
+.card-container {
+    /* margin-top: 20px; */
+    width: 100%;
+    background: var(--background-color-light);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.recap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.recap .card {
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.room {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    /* background: var(--primary-color-lighter); */
+    /* border: 1px solid var(--border-color); */
+    padding: 10px;
+    background: var(--grey-color);
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.room:hover {
+    background: #dbdfe0;
+}
+
+.room span:nth-child(1) {
+    padding: 10px;
+    background: #747b80;
+    color: var(--text-color-light);
+    border-radius: 8px;
+}
+
+.occupied-rooms {
+    /* background-color: #e5e7e9; */
+    background: var(--background-color-light);
+}
+
+.occupied-rooms h3 {
+    background-color: #333333;
+    padding: 6px 10px;
+    color: var(--text-color-light);
+}
+
+/* 
+.occupied-rooms {
+    padding: 20px;
+} */
+
+.occupied-rooms .room {
+    margin-bottom: 10px;
+}
+
+
+
+.occupied-rooms .room span:nth-child(1) {
+    background: var(--success-color);
+}
+
+.occupied-rooms .room:hover {
+    background: #dbdfe0;
+}
+
+.room .countdown {
+    width: 100%;
+    text-align: right;
+    font-size: 12px;
+}
+
+
+.notifs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.notifs .notif {
+    padding: 10px;
+    background: #f3dadd;
+    animation: roomEnter 1s linear;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+@keyframes roomEnter {
+    0% {
+        height: 0;
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        height: auto;
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.optional-container {
+    display: none;
+}
+
+.optional-container.active {
+    display: block;
+}
+
+
+
+
+
+/* Login styles */
+
+.login-body {
+    background: var(--primary-color);
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    background-color: var(--primary-color-light);
+    padding: 4rem 2rem;
+    border-radius: 8px;
+}
+
+.login-container .logo {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 27px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 200;
+}
+
+.login-container p,
+.login-container h2,
+.login-container label {
+    color: var(--text-color-light);
+}
+
+.login-container a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
+
+.login-container form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-container button {
+    color: var(--primary-color-dark);
+    /* border-color: var(--primary-color-light);
+    background: var(--primary-color-light); */
+    border-color: var(--secondary-color);
+    background: var(--secondary-color);
+}
+
+.login-container button:hover {
+    border-color: var(--secondary-color-dark);
+    background: var(--secondary-color-dark);
+}
+
+.login-container input {
+    border-color: #1a3768;
+    background: #1a3768;
+    color: var(--text-color-light);
+}
+
+.login-container input::placeholder {
+    color: #85a1a8;
+}
+
+.option-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.option-row span {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+    transition: all .2s ease-in-out;
+    font-size: 20px;
+    border: 1px solid transparent;
+}
+
+.option-row span.edit {
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.option-row span.delete {
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+.option-row span.edit:hover {
+    color: var(--text-color-light);
+    background: var(--success-color);
+}
+
+.option-row span.delete:hover {
+    color: var(--text-color-light);
+    background: var(--error-color);
+}
+
+.text-danger{
+    color: var(--error-color);
+}
+
+
+footer{
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    color: var(--text-color-muted);
+}
+
+.reduce{
+    display: none;
+}

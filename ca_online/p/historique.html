@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historique | Hôtel management</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+
+<body>
+
+    <aside>
+
+        <div class="logo">
+            LOGO
+        </div>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="home.html" class="">
+                        <span class="material-symbols-outlined">home</span>
+                        <span>Accueil</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="reservation.html" class="">
+                        <span class="material-symbols-outlined">event</span>
+                        <span>Réservations</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="historique.html" class="active">
+                        <span class="material-symbols-outlined">history</span>
+                        <span>Historiques</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        <span class="material-symbols-outlined">bar_chart</span>
+                        <span>Statistique</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="employes.html" class="">
+                        <span class="material-symbols-outlined">people</span>
+                        <span>Employés</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="hotel.html" class="">
+                        <span class="material-symbols-outlined">night_shelter</span>
+                        <span>Hôtel</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="utilisateur.html" class="">
+                        <span class="material-symbols-outlined">person</span>
+                        <span>Utilisateurs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="">
+                        <span class="material-symbols-outlined">settings</span>
+                        <span>Réglages</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+    </aside>
+
+    <header>
+        <div class="container flex-a-center flex-sb">
+            <div class="left flex-a-center gap-1">
+                <span class="material-symbols-outlined icon-btn">menu</span>
+                <div class="top-search">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="search" name="search-text" id="search-text" placeholder="Rechercher...">
+                </div>
+            </div>
+            <div class="right flex-a-center gap-1">
+                <div class="notifications">
+                    <span class="material-symbols-outlined icon-btn">notifications</span>
+                    <div class="drop-items"></div>
+                </div>
+                <div class="login-element">
+                    <span class="material-symbols-outlined icon-btn">person</span>
+                    <div class="drop-items"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="action-btns-container">
+            <!-- <button class="button-primary" data-modal="#checkInModal"><span
+                    class="material-symbols-outlined">add_circle</span>
+                <span>Ajouter un employé</span></button> -->
+            <button class="button-primary" data-modal="#reservationModal"><span
+                    class="material-symbols-outlined">timer</span>
+                Nouvelle réservation</button>
+        </div>
+
+        <h1 class="mt-2">Réservations</h1>
+        <h5>Gérer toutes les réservations</h5>
+
+        <div class="card-container mt-2">
+            <div class="table-responsive">
+                <h3>Liste des réservations</h3>
+                <table class="mt-2">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom client</th>
+                            <th>Téléphone</th>
+                            <th>Type</th>
+                            <th>Nuitées</th>
+                            <th>Date</th>
+                            <th>Heure</th>
+                            <th>Option</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Séjour</td>
+                            <td>2</td>
+                            <td>26/05/2024</td>
+                            <td>14:32</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Gérant</td>
+                            <td>7</td>
+                            <td>26/05/2024</td>
+                            <td>14:32</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#</td>
+                            <td><a href="#">Boris Konin</a></td>
+                            <td>0203040506</td>
+                            <td>Gérant</td>
+                            <td>5</td>
+                            <td>26/05/2024</td>
+                            <td>14:32</td>
+                            <td>
+                                <div class="option-row">
+                                    <span class="material-symbols-outlined edit">edit</span>
+                                    <span class="material-symbols-outlined delete">delete</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+
+
+
+    </main>
+
+    <!-- Modals -->
+
+    <div class="modal" id="reservationModal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3>Réservation</h3>
+                <span class="material-symbols-outlined close-modal">close</span>
+            </div>
+            <div class="modal-body">
+                <form class="form" id="clientForm">
+                    <h4>Infos du client</h4>
+                    <div class="form-group">
+                        <label for="name">Nom et prénoms <span class="text-danger">*</span></label>
+                        <input type="text" name="name" id="name" placeholder="Nom et prénoms" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone <span class="text-danger">*</span></label>
+                        <input type="text" name="phone" id="phone" placeholder="Numéro de téléphone" required>
+                    </div>
+                    <div class="cols-2 gap-2">
+                        <div class="form-group">
+                            <label for="identity">Pièce d'identité N° <span class="text-danger">*</span></label>
+                            <input type="text" name="identity" id="identity" placeholder="Numéro de pièce d'identité">
+                        </div>
+                        <div class="form-group">
+                            <label for="old">Age</label>
+                            <input type="number" name="old" id="old" placeholder="Age">
+                        </div>
+                    </div>
+                    <h4>Service</h4>
+                    <div class="form-group">
+                        <label for="reservation-sejour">Location <span class="text-danger">*</span></label>
+                        <select name="reservation-sejour" id="reservation-sejour"
+                            onchange="manageOptionContainer('#reservation-sejour', '#reservationModal')" required>
+                            <option value="">-- Type de location --</option>
+                            <option value="passage">Passage</option>
+                            <option value="sejour">Séjour</option>
+                        </select>
+                    </div>
+
+                    <div id="roomReceiver" class="mt-2"></div>
+                    <button type="button" data-modal="#roomsModal" class="mt-1 mb-2">Choisir la chambre</button>
+                    <input type="hidden" name="room" id="room" value="" data-pass-price="" data-sejour-price=""
+                        placeholder="Chambre">
+
+                    <!-- Passage -->
+                    <div class="optional-container" id="passage">
+                        <div class="cols-3 gap-2">
+                            <div class="form-group">
+                                <label for="reserve-hours">Nombre d'heures <span class="text-danger">*</span></label>
+                                <input type="number" name="reserve-hours" id="reserve-hours"
+                                    oninput="incrementHours('#start-time', '#end-time', '#reserve-hours');calculAmount();" min="1" max="24">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-time">Début <span class="text-danger">*</span></label>
+                                <input type="time" name="start-time" id="start-time"
+                                    onchange="incrementHours('#start-time', '#end-time', '#hours');">
+                            </div>
+                            <div class=" form-group">
+                                <label for="end-time">Fin <span class="text-danger">*</span></label>
+                                <input type="time" name="end-time" id="end-time" readonly>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Séjour -->
+                    <div class="optional-container" id="sejour">
+                        <div class="cols-3 gap-2">
+                            <div class="form-group">
+                                <label for="nuitees">Nombre de nuitées <span class="text-danger">*</span></label>
+                                <input type="number" name="nuitees" id="nuitees"
+                                    oninput="incrementDays('#start-datetime', '#end-datetime', '#nuitees');calculAmount();" min="1">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-datetime">Début <span class="text-danger">*</span></label>
+                                <input type="datetime-local" name="start-datetime" id="start-datetime"
+                                    onchange="incrementDays('#start-datetime', '#end-datetime', '#nuitees');">
+                            </div>
+                            <div class="form-group">
+                                <label for="end-datetime">Fin</label>
+                                <input type="datetime-local" name="end-datetime" id="end-datetime">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cols-3 gap-2">
+                        <div class="form-group">
+                            <label for="amount-to-paid">Montant à payer <span class="text-danger">*</span></label>
+                            <input type="text" name="amount-to-paid" id="amount-to-paid" placeholder="Montant à payer" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="payment-amount">Montant versé <span class="text-danger">*</span></label>
+                            <input type="text" name="payment-amount" id="payment-amount" placeholder="Montant versé" oninput="calculAmount();" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="remained">Reste à payer</label>
+                            <input type="text" name="remained" id="remained" placeholder="Reste à payer" readonly>
+                        </div>
+                    </div>
+
+                    <div class="flex-j-end flex-a-center gap-1 mt-2">
+                        <button type="reset" onclick="dismissModal('#reservationModal')" class="button-danger">Annuler</button>
+                        <button type="submit" class="button-primary">Enregistrer</button>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-foot">
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="modal" id="roomsModal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3>Choisir une chambre</h3>
+                <span class="material-symbols-outlined close-modal">close</span>
+            </div>
+            <div class="modal-body">
+
+                <div class="rooms">
+
+                    <div class="room flex-sb" data-id="2" data-name="Chambre 2" data-pass-price="3000" data-sejour-price="50000">
+                        <div class="flex-a-center gap-1">
+                            <span class="material-symbols-outlined">bedroom_parent</span>
+                            <strong>Chambre 2</strong>
+                        </div>
+                        <button class="button-success" type="button" onclick="selectRoom(this, 'input#room');">Choisir</button>
+                    </div>
+
+                    
+                    <div class="room flex-sb mt-1" data-id="3" data-name="Chambre 3" data-pass-price="2500" data-sejour-price="45000">
+                        <div class="flex-a-center gap-1">
+                            <span class="material-symbols-outlined">bedroom_parent</span>
+                            <strong>Chambre 3</strong>
+                        </div>
+                        <button class="button-success" type="button" onclick="selectRoom(this, 'input#room');">Choisir</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-foot"></div>
+        </div>
+    </div>
+
+    <script src="public/js/functions.js"></script>
+    <script src="public/js/scripts.js"></script>
+</body>
+
+</html>
